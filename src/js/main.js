@@ -6,7 +6,7 @@ $(document).ready(function () {
   ) {
     console.log('The cookie "employee" exists');
   }
-}
+});
 
 $(document).ready(function () {
   
