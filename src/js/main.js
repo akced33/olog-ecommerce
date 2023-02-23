@@ -1,5 +1,3 @@
-$(document).ready(function () {
-
   //Using cookie presence to avoid tracking an employee. Only capture sessions when the cookie is not present
 $(document).ready(function () {
   if (
@@ -9,6 +7,7 @@ $(document).ready(function () {
   }
 }
 
+$(document).ready(function () {
   
   // Sticky Menu
   $(window).on('scroll', function () {
