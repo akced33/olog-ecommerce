@@ -1,5 +1,15 @@
 $(document).ready(function () {
 
+  //Using cookie presence to avoid tracking an employee. Only capture sessions when the cookie is not present
+$(document).ready(function () {
+  if (
+    document.cookie.split(";").some((item) => item.trim().startsWith("employee="))
+  ) {
+    console.log('The cookie "employee" exists');
+  }
+}
+
+  
   // Sticky Menu
   $(window).on('scroll', function () {
     var scroll = $(window).scrollTop();
@@ -10,6 +20,7 @@ $(document).ready(function () {
     }
   });
 
+  
   //Brand_slider
   $('.brand-area').slick({
     infinite: true,
@@ -136,13 +147,5 @@ $(document).ready(function () {
   $('select').niceSelect();
 });
 
-//Using cookie presence to avoid tracking an employee. Only capture sessions when the cookie is not present
-$(document).ready(function () {
-  if (
-    document.cookie.split(";").some((item) => item.trim().startsWith("employee="))
-  ) {
-    console.log('The cookie "employee" exists');
-  }
-}
 
 
