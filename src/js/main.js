@@ -135,3 +135,14 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('select').niceSelect();
 });
+
+//Using cookie presence to avoid tracking an employee. Only capture sessions when the cookie is not present
+$(document).ready(function () {
+  if (
+    document.cookie.split(";").some((item) => item.trim().startsWith("employee="))
+  ) {
+    console.log('The cookie "employee" exists');
+  }
+}
+
+
