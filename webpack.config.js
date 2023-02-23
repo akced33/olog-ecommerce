@@ -9,6 +9,7 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 module.exports = {
     entry: [
         './src/js/main.js',
+                './src/js/adrian.js',
         './src/scss/main.scss'
     ],
 
